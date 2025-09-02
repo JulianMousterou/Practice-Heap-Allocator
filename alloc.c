@@ -96,13 +96,4 @@ void free(void* user_ptr){
 	free_listp->next = new_free_node; 
 } 
 int main(){
-	int* a = (int*)heap_alloc(100);
-	int* b = (int*)heap_alloc(100); 
-	int* c = (int*)heap_alloc(100);
-
-	free(b);  // Free the middle one
-	int* d = (int*)heap_alloc(50);  // Should reuse b's space (if you implement reuse)
-
-	printf("a=%p, b=%p, c=%p, d=%p\n", a, b, c, d);
-	// d should be close to b's address if reuse works
 }
